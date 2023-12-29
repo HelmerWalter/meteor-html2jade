@@ -1,0 +1,50 @@
+head
+  title HTML to Jade
+  link(href='https://fonts.googleapis.com/css?family=Inconsolata', rel='stylesheet', type='text/css')
+
+body
+  +main
+
+template(name="main") 
+  .header
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href="") HTML to Jade
+        .meteor-switch
+          .checkbox
+            label
+              input#meteor-check(type='checkbox', checked="#{mcheck}")
+              span(rel="tooltip", title="Escape Handlebars Tags") Meteor JS
+          
+    a(href="https://github.com/vidalab/meteor-html2jade", target="_blank")      
+     img(style='position: absolute; top: 0; right: 0; border: 0; z-index: 50;', src='http://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png', alt='Fork me on GitHub')
+
+    .flash-message.label.label-info(style="display:none;") Loading ...
+    .flash-message.label.label-danger(style="display:none;") Oops...
+      
+  .main
+    .container-fluid.fit-h
+      .row-fluid.fit-h
+        .span6.fit-h
+          textarea#editor-html.editor.fit-h(wrap="off", placeholder="Paste/Type HTML code here")
+        .span6.fit-h
+          textarea#editor-jade.editor.fit-h(wrap="off", placeholder="Converted Jade code shown here")
+        
+  .footer      
+    .container-fluid
+      .row-fluid
+        .span12
+          .pull-left 
+            h5
+              | Made by 
+              a(href="https://vida.io", target="_blank") VIDA.IO
+              | . Powered by 
+              a(href="https://meteor.com", target="_blank") Meteor JS
+              |  and 
+              a(href="https://github.com/donpark/html2jade", target="_blank") HTML2JADE
+              
+          .pull-right
+            h5
+              a(href="http://bootswatch.com/flatly/", target="_blank") Bootswatch Flatfly
+              |  Theme
